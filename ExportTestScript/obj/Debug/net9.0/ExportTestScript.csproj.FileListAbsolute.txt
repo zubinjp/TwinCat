@@ -1,5 +1,0 @@
-C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\ExportTestScript\obj\Debug\net9.0\ExportTestScript.csproj.AssemblyReference.cache
-C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\ExportTestScript\obj\Debug\net9.0\ExportTestScript.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\ExportTestScript\obj\Debug\net9.0\ExportTestScript.AssemblyInfoInputs.cache
-C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\ExportTestScript\obj\Debug\net9.0\ExportTestScript.AssemblyInfo.cs
-C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\ExportTestScript\obj\Debug\net9.0\ExportTestScript.csproj.CoreCompileInputs.cache

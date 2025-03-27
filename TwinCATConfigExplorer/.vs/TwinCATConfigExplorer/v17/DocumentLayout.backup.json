@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|c:\\users\\zubinjp\\source\\repos\\twincat_api\\codes\\twincatconfigexplorer\\webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:webapiconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\controllers\\xmlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:controllers\\xmlcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\services\\xmlproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:services\\xmlproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\services\\twincatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:services\\twincatservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\models\\exceptionhandlingattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:models\\exceptionhandlingattribute.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\services\\ixmlproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{494C2944-53CF-481D-800A-06A438A45FA0}|TwinCATConfigExplorer.csproj|solutionrelative:services\\ixmlproducerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "XmlController.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Controllers\\XmlController.cs",
+              "RelativeDocumentMoniker": "Controllers\\XmlController.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Controllers\\XmlController.cs",
+              "RelativeToolTip": "Controllers\\XmlController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T00:56:40.054Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAhwCAAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:39:17.72Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WebApiConfig.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\WebApiConfig.cs",
+              "RelativeDocumentMoniker": "WebApiConfig.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\WebApiConfig.cs",
+              "RelativeToolTip": "WebApiConfig.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T00:01:00.461Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "XmlProducerService.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\XmlProducerService.cs",
+              "RelativeDocumentMoniker": "Services\\XmlProducerService.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\XmlProducerService.cs",
+              "RelativeToolTip": "Services\\XmlProducerService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T19:58:11.794Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "TwinCATService.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\TwinCATService.cs",
+              "RelativeDocumentMoniker": "Services\\TwinCATService.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\TwinCATService.cs",
+              "RelativeToolTip": "Services\\TwinCATService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAcwBgAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:27:01.462Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExceptionHandlingAttribute.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Models\\ExceptionHandlingAttribute.cs",
+              "RelativeDocumentMoniker": "Models\\ExceptionHandlingAttribute.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Models\\ExceptionHandlingAttribute.cs",
+              "RelativeToolTip": "Models\\ExceptionHandlingAttribute.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-27T00:35:55.756Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T21:11:00.095Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IXmlProducerService.cs",
+              "DocumentMoniker": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\IXmlProducerService.cs",
+              "RelativeDocumentMoniker": "Services\\IXmlProducerService.cs",
+              "ToolTip": "C:\\Users\\zubinjp\\source\\Repos\\TwinCAT_API\\Codes\\TwinCATConfigExplorer\\Services\\IXmlProducerService.cs",
+              "RelativeToolTip": "Services\\IXmlProducerService.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwBYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T23:13:12.365Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

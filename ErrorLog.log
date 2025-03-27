@@ -1,0 +1,6 @@
+Error creating XML element for root tree item 'Devices Mappings': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
+Error creating XML element for root tree item 'Device 4 (EtherCAT) Device 1 (EtherCAT)': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
+Error creating XML element for root tree item 'PlcTask PlcTask_CM PlcTask_Oversampling': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
+Error creating XML element for root tree item 'Devices Mappings': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
+Error creating XML element for root tree item 'Device 4 (EtherCAT) Device 1 (EtherCAT)': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
+Error creating XML element for root tree item 'PlcTask PlcTask_CM PlcTask_Oversampling': Exception calling "CreateElement" with "1" argument(s): "The ' ' character, hexadecimal value 0x20, cannot be included in a name."
