@@ -96,12 +96,6 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web" />
-    <Reference Include="System.Web.Http.SelfHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.WebApi.SelfHost.5.3.0\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Web.Http.WebHost, Version=5.3.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.3.0\lib\net45\System.Web.Http.WebHost.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -109,13 +103,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\XmlController.cs" />
-    <Compile Include="Models\ExceptionHandlingAttribute.cs" />
-    <Compile Include="Models\TreeItemRequest.cs" />
-    <Compile Include="Models\TreeItemResponse.cs" />
+    <Compile Remove="Models\ExceptionHandlingAttribute.cs" />
+    <Compile Remove="Models\TreeItemRequest.cs" />
+    <Compile Remove="Models\TreeItemResponse.cs" />
     <Compile Include="Services\IXmlProducerService.cs" />
     <Compile Include="Services\TwinCATService.cs" />
     <Compile Include="Services\XmlProducerService.cs" />
+    <Compile Include="TestControllers\GenerateXmlHelper.cs" />
+    <Compile Include="TestControllers\XmlModificationController.cs" />
+    <Compile Include="TestControllers\XmlRetrievalController.cs" />
     <Compile Include="WebApiConfig.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Startup.cs" />
@@ -164,5 +160,6 @@
   <ItemGroup>
     <Content Include="ILLink\ILLink.Descriptors.LibraryBuild.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Current\Bin\Microsoft.CSharp.targets" />
 </Project>

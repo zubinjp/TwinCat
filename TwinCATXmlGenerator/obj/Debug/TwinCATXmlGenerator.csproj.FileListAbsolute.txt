@@ -1,0 +1,8 @@
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\bin\Debug\TwinCATXmlGenerator.exe.config
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\bin\Debug\TwinCATXmlGenerator.exe
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\bin\Debug\TwinCATXmlGenerator.pdb
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\obj\Debug\TwinCATXmlGenerator.csproj.AssemblyReference.cache
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\obj\Debug\TwinCATXmlGenerator.csproj.ResolveComReference.cache
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\obj\Debug\TwinCATXmlGenerator.csproj.CoreCompileInputs.cache
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\obj\Debug\TwinCATXmlGenerator.exe
+C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCATXmlGenerator\obj\Debug\TwinCATXmlGenerator.pdb

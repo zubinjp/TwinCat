@@ -1,61 +1,71 @@
 using System;
-using System.Xml;
+using System.IO;
 using System.Runtime.InteropServices;
+using System.Xml;
 using EnvDTE;
 using TCatSysManagerLib;
 
-namespace TwinCATProjectXMLGenerator
+namespace TwinCATXmlGenerator
 {
     class Program
     {
         static void Main()
         {
-            // Attach to TwinCAT instance
-            DTE dte = AttachToTwinCAT();
-            if (dte == null)
+            try
             {
-                Console.WriteLine("No active TwinCAT instance found. Ensure the solution is open in TwinCAT XAE.");
-                return;
-            }
-
-            // Validate and retrieve the solution and project
-            Project project = ValidateSolution(dte);
-            if (project == null)
-            {
-                Console.WriteLine("Failed to retrieve the active TwinCAT project.");
-                return;
-            }
-
-            // Access the System Manager
-            ITcSysManager4 systemManager = project.Object as ITcSysManager4;
-            if (systemManager == null)
-            {
-                Console.WriteLine("Error: System Manager object not found.");
-                return;
-            }
-
-            // Prepare XML document
-            XmlDocument xmlDocument = new XmlDocument();
-            XmlElement rootElement = xmlDocument.CreateElement("TwinCATConfiguration");
-            xmlDocument.AppendChild(rootElement);
-
-            // Traverse tree and generate XML
-            string[] rootItems = { "TIPC", "TIIC", "TIID", "TIRT" };
-            foreach (string path in rootItems)
-            {
-                ITcSmTreeItem rootTreeItem = GetTreeItem(systemManager, path);
-                if (rootTreeItem != null)
+                // Attach to active TwinCAT XAE instance
+                DTE dte = AttachToTwinCAT();
+                if (dte == null)
                 {
-                    TraverseTree(rootTreeItem, rootElement, xmlDocument);
+                    Console.WriteLine("No active TwinCAT instance found. Ensure that a TwinCAT solution is open.");
+                    return;
                 }
-            }
 
-            // Save XML to file
-            string filePath = @"C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCAT_Project_Config.xml";
-            SaveXmlToFile(xmlDocument, filePath);
+                // Validate and retrieve the solution/project
+                Project project = ValidateSolution(dte);
+                if (project == null)
+                {
+                    Console.WriteLine("Failed to retrieve the active TwinCAT project.");
+                    return;
+                }
+
+                // Access the System Manager
+                ITcSysManager4 systemManager = project.Object as ITcSysManager4;
+                if (systemManager == null)
+                {
+                    Console.WriteLine("Error: Could not retrieve the System Manager from the project.");
+                    return;
+                }
+
+                // Prepare an XML document
+                XmlDocument xmlDocument = new XmlDocument();
+                XmlElement rootElement = xmlDocument.CreateElement("TwinCATConfiguration");
+                xmlDocument.AppendChild(rootElement);
+
+                // Traverse the tree and produce XML
+                string[] rootPaths = { "TIIC", "TIID", "TIRC", "TIRR", "TIRT", "TIRS", "TIPC", "TINC", "TICC", "TIAC" };
+                foreach (string path in rootPaths)
+                {
+                    ITcSmTreeItem rootTreeItem = systemManager.LookupTreeItem(path);
+                    if (rootTreeItem != null)
+                    {
+                        Console.WriteLine($"Starting traversal from root: {path}");
+                        TraverseTree(rootTreeItem, rootElement, xmlDocument);
+                    }
+                }
+
+                // Save the XML to file
+                string filePath = @"C:\Users\zubinjp\source\Repos\TwinCAT_API\Codes\TwinCAT_Project_Config.xml";
+                SaveXmlToFile(xmlDocument, filePath);
+                Console.WriteLine($"XML successfully generated at: {filePath}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
         }
 
-        // Attach to the active TwinCAT instance
+        // Attach to the active TwinCAT XAE instance
         static DTE AttachToTwinCAT()
         {
             try
@@ -66,112 +76,97 @@ namespace TwinCATProjectXMLGenerator
             }
             catch (COMException)
             {
-                Console.WriteLine("Error: No active TwinCAT instance found.");
+                Console.WriteLine("Failed to attach to the active TwinCAT XAE instance.");
                 return null;
             }
         }
 
-        // Validate the TwinCAT solution and retrieve the project
+        // Validate the TwinCAT solution and retrieve the active project
         static Project ValidateSolution(DTE dte)
         {
             try
             {
                 if (dte.Solution == null || !dte.Solution.IsOpen)
                 {
-                    Console.WriteLine("Error: No TwinCAT solution is currently open.");
+                    Console.WriteLine("No TwinCAT solution is open.");
                     return null;
                 }
 
-                Console.WriteLine("Successfully connected to the open solution: " + dte.Solution.FullName);
                 Project project = dte.Solution.Projects.Item(1);
-                Console.WriteLine("Active Project Name: " + project.Name);
+                Console.WriteLine($"Connected to solution: {dte.Solution.FullName}");
+                Console.WriteLine($"Active project: {project.Name}");
                 return project;
             }
-            catch (Exception ex)
+            catch
             {
-                Console.WriteLine("Error: Failed to validate the TwinCAT solution state. " + ex.Message);
+                Console.WriteLine("Error validating the TwinCAT solution.");
                 return null;
             }
         }
 
-        // Retrieve tree items by path
-        static ITcSmTreeItem GetTreeItem(ITcSysManager4 systemManager, string path)
+        // Recursively traverse the tree and add items to XML
+        static void TraverseTree(ITcSmTreeItem treeItem, XmlElement parentElement, XmlDocument xmlDocument)
         {
-            try
+            if (treeItem == null)
             {
-                ITcSmTreeItem treeItem = systemManager.LookupTreeItem(path);
-                if (treeItem != null)
-                {
-                    Console.WriteLine("Successfully retrieved tree item: " + path);
-                }
-                else
-                {
-                    Console.WriteLine("Warning: Tree item '" + path + "' not found.");
-                }
-                return treeItem;
+                Console.WriteLine("[DEBUG] Encountered null tree item. Skipping...");
+                return;
             }
-            catch (Exception ex)
-            {
-                Console.WriteLine("Error retrieving tree item: " + ex.Message);
-                return null;
-            }
-        }
 
-        // Recursive tree traversal
-        static void TraverseTree(ITcSmTreeItem treeItem, XmlElement xmlNode, XmlDocument xmlDocument)
-        {
+            Console.WriteLine($"[DEBUG] Processing Tree Item: Name='{treeItem.Name}', Path='{treeItem.PathName}', ChildCount={treeItem.ChildCount}");
+
+            // Create an XML element for the current tree item
+            XmlElement currentElement = xmlDocument.CreateElement("TreeItem");
+            currentElement.SetAttribute("PathName", treeItem.PathName);
+            parentElement.AppendChild(currentElement);
+
+            // Add fields based on sample XML
+            currentElement.AppendChild(CreateTextElement(xmlDocument, "ItemName", treeItem.Name));
+            currentElement.AppendChild(CreateTextElement(xmlDocument, "PathName", treeItem.PathName));
+            currentElement.AppendChild(CreateTextElement(xmlDocument, "ItemType", treeItem.ItemType.ToString())); // Adjust as needed
+            currentElement.AppendChild(CreateTextElement(xmlDocument, "ChildCount", treeItem.ChildCount.ToString()));
+
+            // Process children and find deepest child
             foreach (ITcSmTreeItem child in treeItem)
             {
                 try
                 {
                     if (child == null || string.IsNullOrEmpty(child.Name))
                     {
-                        Console.WriteLine("Skipping null or invalid tree item.");
+                        Console.WriteLine("[DEBUG] Skipping invalid or unnamed child node.");
                         continue;
                     }
 
-                    Console.WriteLine("Processing Tree Item: Name=" + child.Name + ", PathName=" + child.PathName);
-                    XmlElement childElement = xmlDocument.CreateElement(SanitizeXmlName(child.Name));
-                    xmlNode.AppendChild(childElement);
-
-                    foreach (dynamic property in child.Properties)
-                    {
-                        if (property != null && property != "System.__ComObject")
-                        {
-                            childElement.SetAttribute(property.Name, property.Value.ToString());
-                        }
-                    }
-
-                    if (child.ChildCount > 0)
-                    {
-                        TraverseTree(child.Children, childElement, xmlDocument);
-                    }
+                    // Recursive traversal
+                    TraverseTree(child, currentElement, xmlDocument);
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("Error processing tree item: " + ex.Message);
+                    Console.WriteLine($"[ERROR] Exception while processing '{treeItem.Name}': {ex.Message}");
                 }
             }
         }
 
-        // Save XML to file
+        // Create an XML text element
+        static XmlElement CreateTextElement(XmlDocument doc, string name, string value)
+        {
+            XmlElement element = doc.CreateElement(name);
+            element.InnerText = value ?? string.Empty;
+            return element;
+        }
+
+        // Save the generated XML to a file
         static void SaveXmlToFile(XmlDocument xmlDocument, string filePath)
         {
             try
             {
                 xmlDocument.Save(filePath);
-                Console.WriteLine("XML saved successfully to: " + filePath);
+                Console.WriteLine($"[INFO] XML saved successfully to {filePath}. Size: {new FileInfo(filePath).Length} bytes");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Error saving XML to file: " + ex.Message);
+                Console.WriteLine($"[ERROR] Failed to save XML file: {ex.Message}");
             }
-        }
-
-        // Sanitize XML element names
-        static string SanitizeXmlName(string name)
-        {
-            return System.Text.RegularExpressions.Regex.Replace(name, @"[^a-zA-Z0-9_.-]", "_").Replace(" ", "_");
         }
     }
 }

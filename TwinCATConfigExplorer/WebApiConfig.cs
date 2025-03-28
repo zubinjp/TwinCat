@@ -1,5 +1,4 @@
 ﻿using System.Web.Http;
-using System.Web.Http.Filters;
 
 public static class WebApiConfig
 {
@@ -21,13 +20,11 @@ public static class WebApiConfig
         // Allow CORS (Cross-Origin Resource Sharing) for external access
         config.EnableCors();
 
-        // Configure global exception handling
-        // Ensure the custom ExceptionHandlingAttribute is correctly implemented and accessible
-        config.Filters.Add(new ExceptionHandlingAttribute());
+        // Note: The custom ExceptionHandlingAttribute was removed.
+        // To avoid build errors, the line below is commented out or removed.
+        // config.Filters.Add(new ExceptionHandlingAttribute());
 
         // Ensure the configuration is initialized
         config.EnsureInitialized();
-
-        // Add other global configurations if required in the future
     }
 }
